@@ -1,0 +1,20 @@
+{
+	"profiles":[
+		{
+			"profileInfo":{
+				"name":"Rajesh N",
+				"email":"rajesh.n@gmail.com",
+				"mobile":"7989715061",
+				"address":"Guntur, Andhrapradesh"
+			}
+		},
+		{
+			"profileInfo":{
+				"name":"Gopi M",
+				"email":"gopi.m@apssdc.in",
+				"mobile":"7730035520",
+				"address":"Guntur, Andhrapradesh"
+			}
+		}
+	]
+}
