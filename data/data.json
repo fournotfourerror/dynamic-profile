@@ -6,7 +6,21 @@
 				"email":"rajesh.n@gmail.com",
 				"mobile":"7989715061",
 				"address":"Guntur, Andhrapradesh"
-			}
+			},
+			"education":[
+				{
+					"degree":"B-Tech (C.S.E)",
+					"institute":"vishnu college of engineering"
+				},
+				{
+					"degree":"Intermediate (M.P.C)",
+					"institute":"Sri chaitanya junior college"
+				},
+				{
+					"degree":"SSC",
+					"institute":"Bhashyam public school"
+				}
+			]
 		},
 		{
 			"profileInfo":{
@@ -14,7 +28,21 @@
 				"email":"gopi.m@apssdc.in",
 				"mobile":"7730035520",
 				"address":"Guntur, Andhrapradesh"
-			}
+			},
+			"education":[
+				{
+					"degree":"B-Tech (C.S.E)",
+					"institute":"vishnu college of engineering"
+				},
+				{
+					"degree":"Intermediate (M.P.C)",
+					"institute":"Sri chaitanya junior college"
+				},
+				{
+					"degree":"SSC",
+					"institute":"Bhashyam public school"
+				}
+			]
 		}
 	]
 }

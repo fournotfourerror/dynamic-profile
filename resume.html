@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+<section id="root" class="parent"> 
+
+</section>
+</body>
+<script> 
+var param=window.location.search.substring(1).split("=");
+var value=param[1];
+fetch('data/data.json').then(res=>{
+	return res.json();
+}).then(data=>{
+	profileInfo(data.profiles[value]);
+	profileDescription(data.profiles[value]);
+
+})
+
+var parent=document.querySelector("#root");
+var child1=document.createElement("article");
+child1.classList.add("child");
+var child2=document.createElement("article");
+child2.classList.add("child2");
+
+parent.append(child1);
+parent.append(child2);
+
+function profileInfo(i){
+		var name=document.createElement("h2");
+		name.textContent=i.profileInfo.name;
+		name.style.color="#588ae1";
+		name.style.textShadow="3px 3px 3px #ddd";
+		child1.append(name);
+
+		var email=document.createElement("a");
+		email.textContent=i.profileInfo.email;
+		email.href="mailto:"+i.profileInfo.email;
+		email.classList.add("email");
+		child1.append(email);
+
+		// Mobile
+		var mobile=document.createElement("a");
+		mobile.textContent=i.profileInfo.mobile;
+		mobile.href="tel:"+i.profileInfo.mobile;
+		mobile.classList.add("mobile");
+		child1.append(mobile);
+}
+
+function profileDescription(i){
+	var heading1=document.createElement("h2");
+	var hr=document.createElement("hr");
+	heading1.textContent="Educational qualifications";
+	child2.append(heading1);
+	child2.append(hr);
+
+	i.education.map(j=>{
+		var degree=document.createElement("h3");
+		degree.textContent=j.degree;
+		child2.append(degree);
+
+		var inst=document.createElement("em");
+		inst.textContent=j.institute;
+		child2.append(inst);
+	})
+
+}
+</script>
+</html>
