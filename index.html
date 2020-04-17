@@ -2,12 +2,103 @@
 <html>
 <head>
 	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" href="css/style.css"/>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
 </head>
 <body>
-	<section id="root" class="parent"> 
+	<div class="row" style="justify-content: center">
+		<div class="col-md-8">
+			<div class="alert alert-warning"> <strong> Hey! </strong> Please fillout all the fields. </div>
+		</div>
+	</div>
+
+	<div class="row" style="justify-content:center">
+		<div class="col-md-4 col-sm-8 col-lg-4">
+			<div class="card"> 
+				<div class="card-header bg-primary text-white text-center"> Registration form </div>
+				<div class="card-body"> 
+					<form> 
+						<input type="text" class="form-control" placeholder="Name" required/> <br>
+
+						<input type="email" class="form-control" placeholder="E-mail" required /> <br>
+
+						<input type="file" class="form-control" required /> <br>
+
+						<select class="form-control"> 
+							<option value="" selected disabled> Select your city </option>
+							<option value="krishna"> Krishna </option>
+
+							<option value="guntur"> Guntur </option> 
+							<option value="Chittore"> Chittore </option>
+						</select> <br>
+
+						<input type="submit" class="btn btn-primary" style="display: block; margin: 0 auto;" value="Register"/>
+					</form>
+				 </div>
+			</div>
+		</div>
+
+		<div class="col-md-6">
+
+			<div class="table-responsive">
+			<table class="table table-bordered table-hover">
+				<thead class="thead-dark">
+					<tr> 
+						<th> Name </th>
+						<th> Best Friend </th>
+						<th> Best Friend 2 </th>
+						<th> Favorite food </th>
+					</tr>	
+				</thead>
+
+				<tbody> 
+					<tr class="bg-primary text-white"> 
+						<td> Ravi </td>
+						<td> Ranga Rao </td>
+						<td> Badulla </td>
+						<td> Chicken 65</td>
+					</tr>
+
+					<tr class="bg-warning text-white"> 
+						<td> Ayyappa </td>
+						<td> Ravisasthri </td>
+						<td> Uma mahesh </td>
+						<td> Banana juice </td>
+					</tr>
+
+					<tr class="bg-info text-white"> 
+						<td> Sai Ram </td>
+						<td> Raja </td>
+						<td> Ranganayakulu </td>
+						<td> millets </td>
+					</tr>
+
+					<tr class="bg-success text-white"> 
+						<td> Rajesh </td>
+						<td> Praneeth </td>
+						<td> Ravi P</td>
+						<td> Avakay biryani </td>
+					</tr>
+
+
+				</tbody>
+			</table>
+			</div>
+		</div>
+	</div>
+	<section id="root" class="parent container"> 
 
 	</section>
 	<script src="js/main.js"> </script>
 </body>
 </html>
+<script>
+	if('serviceWorker' in navigator){
+		navigator.serviceWorker.register('./serviceWorker.js',{scope:'./'}).then(alert=>{
+			console.log("Registration of serviceWorker is successful")
+		}).catch(error=>{
+			console.log("Registration is failed"+error);
+		})
+	}
+</script>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css/bootstrap.min.css"/>
+	<style>
+		.custom-row{
+			border: 1px dashed red;
+		}
+		.custom-col{
+			border: 1px dotted blue;
+		}
+	</style>
+	<!-- Scripts -->
+	<script src="js/jQuery.js"> </script>
+	<script src="js/bootstrap.min.js"> </script> 
+</head>
+<body>
+	<div class="container" style="border:1px solid #ddd">
+
+		<div class="row"> 
+			<div class="alert alert-success alert-dismissible">
+				<a href="#" class="close" data-dismiss="alert"> x </a>
+				<p> Sample alert </p>
+			</div>
+		</div>
+		<!-- Row 1 -->
+		<div class="row custom-row">
+			<div class="col-sm-4 col-md-6 col-lg-4 custom-col offset-4">
+				Row 1 - Col-1
+			</div>
+
+			<div class="col custom-col">
+				Row 1 - col-2
+			</div>
+		</div>
+
+		<!-- Row 2 -->
+		<div class="row custom-row"> 
+			<div class="col custom-col">
+				Row 2 - col-1
+			</div>
+		</div>
+	</div>
+</body>
+</html>
